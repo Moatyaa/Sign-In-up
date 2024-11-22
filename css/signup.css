@@ -1,0 +1,218 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    display: flex;
+}
+
+.cover-section {
+    flex: 40%;
+    height: 100vh;
+    color: white;
+    background-color: #4fc990;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.logo h1 {
+    font-size: 4em;
+    margin: 10px;
+}
+
+.cover-section button {
+    color: white;
+    font-size: 20px;
+    border: 2px rgb(255, 255, 255) solid;
+    background-color: transparent;
+    padding: 10px 60px;
+    border-radius: 30px;
+    transition: all 0.2s  ;
+    cursor: pointer;
+}
+
+.cover-section .SignUpBtn {
+    display: none;
+}
+
+.cover-section button:hover {
+    transform: scale(1.1);
+}
+
+@keyframes animate1 {
+    0%{
+        left:0;
+    }
+    100%{
+        left:60%;
+    }
+}
+
+@keyframes animate3 {
+    0%{
+        left:60%
+    }
+    100%{
+        left:0%;
+    }
+}
+
+.sign-section {
+    flex: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+}
+
+@keyframes animate2 {
+    0%{
+        right:0
+    }
+    
+    100%{
+        right:40%;
+    }
+}
+@keyframes animate4 {
+    0%{
+        right:40%
+    }
+    
+    100%{
+        right:0;
+    }
+}
+
+.sign-section h1 {
+    font-size: 4em;
+    color: #4fc990;
+}
+
+.sign-section ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.sign-section ul li {
+    margin: 15px;
+    font-size: 25px;
+    padding: 15px;
+    border: 1px #938a7e solid;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.sign-section ul li:hover {
+    background-color: black;
+    color: white;
+}
+
+.sign-section p {
+    color: #938a7e;
+    font-size: 18px;
+}
+
+.sign-section form {
+    text-align: center;
+}
+
+.sign-section input {
+    width: 60%;
+    padding: 15px;
+    margin: 20px;
+    background-color: #eee;
+    border: none;
+}
+
+.sign-section button {
+    font-size: 18px;
+    background-color: #4fc990;
+    color: white;
+    border: 1px solid #4fc990;
+    border-radius: 20px;
+    padding: 10px 30px;
+    transition: all 0.3s;
+}
+
+.sign-section button:hover {
+    border: 1px solid #4fc990;
+    background-color: white;
+    color: #4fc990;
+}
+
+.sign-section button:hover {
+    cursor: pointer;
+}
+
+.sign-section .sub-SignInBtn {
+    display: none;
+}
+
+@media (max-width: 992px) {
+
+    .cover-section .logo h1 {
+        font-size: 3em;
+    }
+
+    .cover-section button {
+        font-size: 15px;
+        animation: none;
+    }
+
+    .cover-section button:hover {
+        font-size: 20px;
+    }
+
+    .sign-section {
+        margin: 0px 0px 40px;
+    }
+
+    .sign-section .main-title {
+        text-align: center;
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .cover-section {
+        width: 100%; 
+        left: 0 !important;
+        animation: none !important;
+    }
+
+    .cover-section .logo {
+        margin: 60px 0px 10px;
+    }
+    
+    
+    .cover-section button {
+        margin: 0px 0px 60px;
+    }
+    
+    .sign-section {
+        margin: 0px 0px 40px;
+        right: 0 !important;
+        animation: none !important;
+    }
+
+    .sign-section .main-title {
+        font-size: 2.5rem;
+    }
+
+}
+
